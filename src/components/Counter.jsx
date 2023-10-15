@@ -20,6 +20,16 @@ export default function Counter() {
 
       <img src={state}  alt="" width='500'/>
     </div>
+
+    <h1>Migrating to TypeScript</h1>
+    <p>I have the code saved in a file in this folder, but it does not render. Here is the text of the error...</p>
+<code>Module not found: Error: Can't resolve './components/CounterTS' in '/Users/christineiyer/Documents/self-guided-learning/counter/src'</code>
+<br></br>
+<aside>Steps to open a FrontEnd Masters TS app. Clone ts repo...</aside>
+<br></br>
+<code>npm install</code>
+<br></br>
+<code>npm i react-scripts</code>
   </div>
   )
 }
