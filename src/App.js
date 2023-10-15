@@ -1,4 +1,4 @@
-import CounterTwo from './components/CounterTwo'
+import Counter from './components/Counter'
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
       Hi
       </header>
-      <CounterTwo />
+      <Counter />
     </div>
   );
 }
