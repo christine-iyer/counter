@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Counter from './components/Counter'
 import ModalDialogue from './components/ModalDialogue'
-
+import Reducer from './components/Reducer'
 function App() {
   const [show, setShow] = useState(false)
   return (
@@ -21,6 +21,10 @@ function App() {
           <button onClick={() => 
             setShow(false)}>Close</button>
         </ModalDialogue>
+        <br />
+        <br />
+        <hr></hr>
+        <Reducer />
       </>
       
     </div>
