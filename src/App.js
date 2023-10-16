@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Counter from './components/Counter'
 import ModalDialogue from './components/ModalDialogue'
 import Reducer from './components/Reducer'
+import Calculator from './components/useReducer/Calculator';
 function App() {
   const [show, setShow] = useState(false)
   return (
@@ -25,6 +26,8 @@ function App() {
         <br />
         <hr></hr>
         <Reducer />
+        <hr></hr>
+        <Calculator />
       </>
       
     </div>
