@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Counter from './components/Counter'
 import ModalDialogue from './components/ModalDialogue'
+
 function App() {
   const [show, setShow] = useState(false)
   return (
@@ -12,12 +13,13 @@ function App() {
       <>
         <button onClick={() => setShow(true)}>Open
         </button>
-        <ModalDialogue isOpen={show}>
-          Hi
+        <ModalDialogue className= "modal" isOpen={show}>
+          <h1> The app in a modal</h1>
+         
+          <Counter width='100px' />
           <br />
           <button onClick={() => 
             setShow(false)}>Close</button>
-          
         </ModalDialogue>
       </>
       
