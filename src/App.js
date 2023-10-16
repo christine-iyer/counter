@@ -28,6 +28,10 @@ function App() {
         <Reducer />
         <hr></hr>
         <Calculator />
+        <br />
+        <br />
+        <hr></hr>
+
       </>
       
     </div>
