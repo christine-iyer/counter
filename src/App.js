@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Counter from './components/Counter'
-import ModalDialogue from './components/ModalDialogue'
+import Effect from './components/Effect'
 import Reducer from './components/Reducer'
 import Calculator from './components/useReducer/Calculator';
 function App() {
@@ -12,16 +12,23 @@ function App() {
       </header>
       <Counter />
       <>
+      <h1>useEffect</h1>
+      <h3>Modal 'uses effects'</h3>
         <button onClick={() => setShow(true)}>Open
         </button>
-        <ModalDialogue className= "modal" isOpen={show}>
-          <h1> The app in a modal</h1>
-         
-          <Counter width='100px' />
+        <Effect className="modal" isOpen={show}>
+          <h1>useEffect Hook Example</h1>
+          <p>The modal is a perfect illustration of the use Effect hook.</p>
           <br />
-          <button onClick={() => 
+          <button onClick={() =>
             setShow(false)}>Close</button>
-        </ModalDialogue>
+        </Effect>
+
+
+
+
+
+
         <br />
         <br />
         <hr></hr>
@@ -33,9 +40,9 @@ function App() {
         <hr></hr>
 
       </>
-      
+
     </div>
-    
+
 
   );
 }

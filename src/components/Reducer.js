@@ -14,6 +14,10 @@ export default function Reducer() {
 
   return (
     <>
+    <div>
+     <h1>useReducer</h1>
+     <p>the useReducer function adds state to components, in the same way that useState does, </p>
+    </div>
       <button onClick={() => {
         dispatch({ type: 'incremented_age' })
       }}>
