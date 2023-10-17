@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import state from '../photos/state.png'
+import state from '../../photos/state.png'
 
 export default function Counter() {
   const [count, setCount] = useState(0)
