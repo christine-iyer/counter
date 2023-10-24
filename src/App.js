@@ -10,10 +10,12 @@ import calc1 from './photos/calc1.png'
 import calc2 from './photos/calc2.png'
 import calc3 from './photos/calc3.png'
 import calc4 from './photos/calc4.png'
+import './App.css'
 
 function App() {
   const [showEffect, setShowEffect] = useState(false)
   const [showReducer, setShowReducer] = useState(false)
+  const [showDiv, setShowDiv] = useState(false)
   return (
     <div className="App">
       <header className="App-header">
@@ -21,7 +23,7 @@ function App() {
       </header>
       <Counter />
       <>
-      <hr></hr>
+        <hr></hr>
         <h1>useEffect</h1>
         <p>useEffect is a React Hook that lets you synchronize a component with an external system.
           This hook uses side effects from actions. Side effects include data fetching, setting up a subscription,
@@ -59,24 +61,38 @@ function App() {
           <button onClick={() =>
             setShowReducer(false)}>Hide Code</button>
         </Effect>
-
-
         <br />
         <br />
         <hr></hr>
         <p>This is a code sandbox to work through tomorrow.
           <a href="https://codesandbox.io/s/crystalcuonter-xx94fz"> this code sandbox </a>
-           </p>
-        
+        </p>
         <Reducer />
         <hr></hr>
-        
-<ToDoList />
+        <ToDoList />
         <hr></hr>
+        <button onClick={() => setShowDiv(true)}>Show Note
+        </button>
+        <Effect className="modal" isOpen={showDiv}>
+          <h1 style={{ 'color': 'yellow' }}>FAQ #1</h1>
+          <div class="quote-container">
+            <i class="pin"></i>
+            <blockquote class="note yellow">
+              I can do anything once I've had a cup of SleepyTime Tea, perhaps even fall sleep.
+              <cite class="author">Dillon Brady</cite>
+            </blockquote>
+          </div>
+          <br />
+          <button onClick={() =>
+            setShowDiv(false)}>Back to FAQs</button>
+        </Effect>
       </>
     </div>
   );
 }
 
 export default App;
+
+
+
 
