@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Counter from './components/useState/Counter'
+import CounterTS from './components/useState/CounterTS'
 import Effect from './components/useEffect/Effect'
 import Reducer from './components/useReducer/Reducer'
 import Calculator from './components/useEffect/Calculator/Calculator';
@@ -10,18 +10,30 @@ import calc1 from './photos/calc1.png'
 import calc2 from './photos/calc2.png'
 import calc3 from './photos/calc3.png'
 import calc4 from './photos/calc4.png'
+import counterCode from './photos/counterCode.png'
 import './App.css'
 
 function App() {
+  const [showCounterCode, setShowCounterCode] = useState(false)
   const [showEffect, setShowEffect] = useState(false)
   const [showReducer, setShowReducer] = useState(false)
   const [showDiv, setShowDiv] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        Hi
-      </header>
-      <Counter />
+
+      <CounterTS />
+      <button onClick={() => setShowCounterCode(true)}>Show Counter Code
+        </button>
+        <Effect className="modal" isOpen={showCounterCode}>
+          <h1>useState Hook Example</h1>
+          <div>
+            <img src={counterCode} width='300' height='300' alt=''></img>
+          </div>
+          <br />
+          <button onClick={() =>
+            setShowCounterCode(false)}>Hide Code</button>
+        </Effect>
+
       <>
         <hr></hr>
         <h1>useEffect</h1>
@@ -37,15 +49,17 @@ function App() {
         <button onClick={() => setShowEffect(true)}>Show Modal Code
         </button>
         <Effect className="modal" isOpen={showEffect}>
-          <h1>useEffect Hook Example #1</h1>
+          <h1>useEffect Hook Example</h1>
           <div>
             <img src={useEffect1} width='300' height='300' alt=''></img>
             <img src={useEffect2} width='300' height='300' alt=''></img>
+  
           </div>
           <br />
           <button onClick={() =>
             setShowEffect(false)}>Hide Code</button>
         </Effect>
+
         <Calculator />
         <button onClick={() => setShowReducer(true)}>Show Calculator Code
         </button>

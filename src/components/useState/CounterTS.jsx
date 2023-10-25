@@ -9,10 +9,7 @@ export default function Counter() {
       <button onClick={() => setCount(count + 1)}>Click</button> 
     </div>
   )
-
-
 }
-
 
 
 
